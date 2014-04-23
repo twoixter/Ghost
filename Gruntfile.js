@@ -939,7 +939,7 @@ var path           = require('path'),
         // Before running in production mode
         grunt.registerTask('prod', 'Build JS & templates for production', ['handlebars', 'concat', 'uglify', 'copy:prod', 'master-warn']);
 
-        grunt.registerTask('heroku:development', 'Compile for Heroku', ["prod"]);
+        grunt.registerTask('heroku:production', 'Compile for Heroku', ["prod"]);
 
         // When you just say 'grunt'
         grunt.registerTask('default', 'Build JS & templates for development', ['update_submodules', 'handlebars', 'concat', 'copy:dev']);
