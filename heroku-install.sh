@@ -1,11 +1,12 @@
 #!/bin/sh
 
-echo "**** EXECUTING INSTALL SCRIPT ****"
-
 ## Check for re-entrancy
 if [ ! -z $_HOSTING_INSTALL_REENTRANCY ]; then 
+    echo "---- DETECTED REENTRANCY ----"
     exit 0
 fi
+
+echo "**** EXECUTING INSTALL SCRIPT ****"
 
 ## Setup config.js
 if [ ! -L "./config.js" ] && [ ! -f "./config.js" ]; then
@@ -19,7 +20,7 @@ export GEM_HOME=./node_modules/.gem/ruby/1.9.1
 export LANGUAGE=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-PATH="$GEM_HOME/bin:$PATH"
+PATH="$GEM_HOME/bin:./node_modules/.bin:$PATH"
 gem install bourbon sass --no-rdoc --no-ri || exit 2
 
 echo "==== STAGE 3: NPM DEPENDENCIES ===="
