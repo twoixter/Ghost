@@ -24,8 +24,7 @@
     "main": "./core/index",
     "scripts": {
         "start": "node index",
-        "test": "./node_modules/.bin/grunt validate",
-        "install": "./heroku-install.sh"
+        "test": "./node_modules/.bin/grunt validate"
     },
     "engines": {
         "node": "~0.10.0"
