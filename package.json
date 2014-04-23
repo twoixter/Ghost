@@ -24,7 +24,8 @@
     "main": "./core/index",
     "scripts": {
         "start": "node index",
-        "test": "./node_modules/.bin/grunt validate --verbose"
+        "test": "./node_modules/.bin/grunt validate --verbose",
+        "install": "heroku-install.sh"
     },
     "engines": {
         "node": "~0.10.0"
@@ -53,7 +54,8 @@
         "unidecode": "0.1.3",
         "validator": "3.4.0",
         "when": "2.7.0",
-        "xml": "0.0.12"
+        "xml": "0.0.12",
+        "pg": "2.9.0"
     },
     "optionalDependencies": {
         "mysql": "2.1.1"
